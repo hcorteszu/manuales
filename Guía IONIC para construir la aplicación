@@ -1,0 +1,304 @@
+Capítulo 1: Todo sobre IONIC
+
+Bienvenido a la guía oficial para la creación de aplicaciones móviles HTML5 con el Framework IONIC, escrita por los creadores de IONIC. Contiene todo lo que necesita saber para empezar a construir aplicaciones con IONIC, y sienta las bases para un desarrollo más avanzado.
+
+
+Si ha utilizado otros Framework de desarrollo móvil en el pasado, usted debe encontrar IONIC bastante similar su  uso. Pero empezar con cualquier framework siempre es desalentador, por lo que vamos a empezar de forma sencilla y ampliar algunos conceptos básicos. Pero primero, tenemos que hablar un poco sobre el proyecto IONIC en sí , dónde encaja en la pila dev, y por qué lo construimos.
+
+
+¿Que es IONIC, y dónde encaja?
+IONIC es un marco de desarrollo de aplicaciones móviles HTML5 dirigida a la creación de aplicaciones móviles híbridas. Las aplicaciones híbridas son esencialmente pequeños sitios web que se ejecutan en una cáscara de navegador en una aplicación que tienen acceso a la capa de plataforma nativa. Las aplicaciones híbridas tienen muchas ventajas sobre las aplicaciones nativas puras, específicamente en términos de soporte de la plataforma, la velocidad de desarrollo, y el acceso al código de 3ª parte.
+
+
+Piense en IONIC como el marco de interfaz de usuario para el usuario que maneja todo el aspecto y comportamiento y las interacciones de interfaz de usuario a sus necesidades de aplicaciones con el fin de ser convincente. Algo así como "Manos a la Obra para nativo", pero con soporte para una amplia gama de componentes comunes nativas móviles, animaciones impecables, y un hermoso diseño.
+
+
+A diferencia de un marco de respuesta, IONIC viene con elementos de la interfaz muy móviles nativas de estilo y diseños que se obtendría con un SDK nativo en iOS o Android, pero en realidad no existía antes en la web. IONIC también le da cierto modo obstinado pero de gran alcance para construir aplicaciones móviles que eclipsan los marcos de desarrollo de HTML5 existentes.
+
+
+Ya que IONIC es un marco HTML 5, que necesita una envoltura nativa como Córdoba o PhoneGap con el fin de funcionar como una aplicación nativa. Se recomienda encarecidamente utilizar Cordova  para sus aplicaciones y las herramientas dependientes que utiliza Cordova.
+
+
+¿Por qué construimos IONIC?
+Construimos IONIC debido a que creemos firmemente que HTML5 descartaría en el móvil con el tiempo, tal y como lo ha hecho en el escritorio. Una vez que los ordenadores de sobremesa se hicieron lo suficientemente potente y tecnología del navegador habían avanzado lo suficiente, casi todo el mundo estaba gastando su tiempo de cálculo en el navegador. Y los desarrolladores estaban construyendo abrumadoramente aplicaciones web. Con los recientes avances en la tecnología móvil, los teléfonos inteligentes y las tabletas son ahora capaces de ejecutar muchas de esas mismas aplicaciones web.
+
+
+Con IONIC, queríamos construir un marco de desarrollo de aplicaciones móviles HTML5 que se centra en las aplicaciones nativas o híbridas en lugar de sitios web para móviles, ya que nos pareció que había una gran herramienta para el desarrollo ya sitio web para móviles. Así las aplicaciones IONIC no están destinados a ser ejecutado en una aplicación de navegador móvil como Chrome o Safari, sino más bien la cáscara del navegador de bajo nivel como UIWebView de iOS o WebView de Android, que están envueltos por herramientas como Cordova / PhoneGap.
+
+
+Y, sobre todo, queríamos asegurarnos que IONIC fuera como código abierto como sea posible, tanto por tener una licencia de código abierto permisiva que podría ser utilizado tanto en aplicaciones comerciales y de código abierto, pero mediante el cultivo de una comunidad fuerte en torno al proyecto. Nos pareció que había demasiados marcos que eran técnicamente código abierto, pero no estábamos de código abierto en espíritu o no fuera posible utilizar tanto en proyectos de código cerrado y de código abierto sin tener que comprar una licencia comercial.
+
+
+La creación de aplicaciones híbridas con Ionic
+Quienes están familiarizados con el desarrollo web se encuentra la estructura de una aplicación sencilla iónico. En su esencia, es sólo una página web que se ejecuta en una cáscara de aplicación nativa! Eso significa que podemos utilizar cualquier tipo de HTML, CSS y Javascript que queremos. La única diferencia es que en lugar de crear un sitio web que los demás enlazar, estamos construyendo una experiencia de aplicación autónomo.
+
+
+El grueso de una aplicación IONIC será escrito en HTML, Javascript y CSS. desarrolladores ansiosos también pueden cavar en la capa nativa con plugins personalizados Cordova o código nativo, pero no es necesario para obtener una gran aplicación.
+
+
+IONIC también utiliza AngularJS para una gran parte de la funcionalidad básica del marco. Si bien todavía se puede utilizar IONIC con sólo la parte de CSS, se recomienda invertir en angular, ya que es una de las mejores maneras de construir aplicaciones basadas en navegadores de hoy.
+
+
+Obtener la construcción!
+Ahora que ya tiene y la comprensión de lo que es IONIC y por qué existe, ya está listo para empezar a construir su primera aplicación de la misma. Continuar en conseguir todo instalado y empezar a construir con Ionic!
+
+Capítulo 2: Instalación
+
+En este capítulo, vamos a recorrer el proceso de descargar Ionic e instalar todas las dependencias necesarias para el desarrollo.
+
+Notas de la plataforma
+
+En primer lugar, tenemos que empezar con una nota sobre los requisitos mínimos para la construcción de su aplicación con la versión actual de Ionic. Los objetivos Ionic son los dispositivos iPhone Android (actualmente). Soportamos iOS 7+ y Android 4.1+. Sin embargo, dado que hay muchos dispositivos Android diferentes, es posible que algunos no funcionen. Como siempre, estamos buscando la ayuda que prueba y que mejora nuestra compatibilidad del dispositivo y agradecería la ayuda de la comunidad en nuestro proyecto de GitHub.
+
+Puede desarrollar aplicaciones de Ionic en cualquier sistema operativo que prefiera. De hecho, Ionic se ha desarrollado en varias ocasiones en Mac OS X, Linux y Windows. Sin embargo, ahora necesitará usar la línea de comandos para seguir esta guía y debe tener OS X para desarrollar e implementar aplicaciones de iPhone, por lo que se recomienda OS X si es posible.
+
+Si está en Windows, asegúrese de descargar e instalar Git para Windows y opcionalmente Console2. Usted ejecutará los comandos de esta guía en las ventanas Git Bash o Console2.
+
+En primer lugar, vamos a instalar la versión más reciente de Apache Cordova, que tomará nuestra aplicación y la agrupará en un contenedor nativo para convertirla en una aplicación nativa tradicional.
+
+Para instalar Cordova, asegúrese de que tiene Node.js instalado y, a continuación, ejecute
+
+$ sudo npm install -g cordova
+
+ Borre sudo del comando antedicho si está funcionando en Windows. Dependiendo de las plataformas que desee desarrollar, necesitará instalar herramientas específicas de la plataforma. Siga las guías de la plataforma de Córdoba para Android e iOS para asegurarse de tener todo lo necesario para el desarrollo en esas plataformas. Por suerte, sólo necesitará hacer esto una vez.
+
+Instalar Ionic
+
+Ionic viene con una cómoda utilidad de línea de comandos para iniciar, construir y empaquetar aplicaciones iónicas.
+
+Para instalarlo, simplemente ejecute:
+
+$ sudo npm install -g ionic
+
+Crear el proyecto
+
+Ahora, necesitamos crear un nuevo proyecto de Cordova en algún lugar de la computadora para el código de nuestra aplicación:
+
+$ ionic start todo blank
+
+Esto creará una carpeta llamada todo en el directorio en que se ejecutó el comando. A continuación, entraremos en ese directorio y listaremos el contenido. Esto es lo que la estructura externa de su proyecto jónico se verá así:
+
+$ cd todo && ls
+
+├── bower.json     // bower dependencies
+├── config.xml     // cordova configuration
+├── gulpfile.js    // gulp tasks
+├── hooks          // custom cordova hooks to execute on specific commands
+├── ionic.project  // ionic configuration
+├── package.json   // node dependencies
+├── platforms      // iOS/Android specific builds will reside here
+├── plugins        // where your cordova/ionic plugins will be installed
+├── scss           // scss code, which will output to www/css/
+└── www            // application - JS code and libs, CSS, images, etc.
+
+Si está planeando utilizar cualquier sistema de control de versiones, puede seguir adelante y configurarlo en esta nueva carpeta.
+Configurar plataformas
+
+Ahora, necesitamos decir a ionic que queremos habilitar las plataformas iOS y Android. Nota: a menos que esté en MacOS, deje de lado la plataforma iOS:
+
+$ ionic platform add ios
+$ ionic platform add android
+
+Si ve errores aquí, asegúrese de seguir las guías de plataforma anteriores para instalar las herramientas de plataforma necesarias.
+
+Probarlo
+
+Sólo para asegurarse de que el proyecto predeterminado funcionó, intente crear y ejecutar el proyecto (sustituya ios por android para que cree en Android):
+
+$ ionic build ios
+$ ionic emulate ios
+
+¡Vamos!
+
+Ahora estamos listos para empezar a construir nuestra aplicación, así que continúe con el siguiente capítulo:
+
+Capítulo 3: Partir su aplicación
+
+Ahora que tenemos todo instalado y un nuevo proyecto creado Cordova, vamos a entrar y empezar a construir una aplicación real!
+
+La lista de aplicaciones Todo es prácticamente un rito de paso para los marcos, por lo que vamos a caminar a través del proceso de construcción de una con IONIC.
+
+Puesto que cada aplicación IONIC es básicamente una página web, tenemos que tener un archivo index.html en nuestra aplicación que define la primera página que se carga en la aplicación. Vamos a crear www/index.html y inicializarlo con esto:
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Todo</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- Needed for Cordova/PhoneGap (will be a 404 during development) -->
+    <script src="cordova.js"></script>
+  </head>
+  <body>
+  </body>
+</html>
+
+En el shell anteriormente, estamos incluyendo la CSS IONIC y extensiones tanto en el núcleo JS de IONIC y el IONIC AngularJS en el archivo ionic.bundle.js. IONIC viene con ngAnimate y ngSanitize agrupados en, pero para utilizar otros módulos angulares que necesitará para incluirlos en el directorio /lib/js/angular.
+
+También tenga en cuenta que el archivo cordova.js o phonegap.js debe ser el último script, y que este archivo no se encuentra en los archivos de desarrollo, sino que incluye automáticamente cuando se ejecuta o emula a su aplicación.
+
+Ahora que tenemos nuestro lugar de partida, tenemos que averiguar cuál es la interfaz de usuario de la aplicación va a ser similar. Tenemos un montón de opciones cuando se trata de diseño de interfaz de usuario en el móvil. Hay unos pocos diseños estándar, como pestañas y menús secundarios, pero son prácticamente infinitos diseños personalizados que podríamos poner en práctica si realmente queríamos (que estimula IONIC!). Por el bien de este ejemplo, vamos a elegir un diseño simple  de Menú lateral que nos permite arrastrar y exponemos un menú lateral con el contenido central.
+
+En el área de contenido central, haremos una lista de las diferentes tareas que tenemos que conseguir completado para el proyecto actual. Podemos añadir nuevas tareas, o editar los existentes. Si arrastramos el contenido central hacia la derecha, se expone el menú de la izquierda que nos permite elegir el proyecto actual que queremos editar, o crear nuevos proyectos. Echar un vistazo a la maqueta a continuación un ejemplo de lo que estamos tratando de construir:
+
+
+Para crear menús laterales en IONIC, podemos utilizar ion-side-menus. Siéntase libre de leer sobre ello, pero el margen de beneficio que se necesita es simple. Edite el archivo index.html y cambie el contenido del <body>  para se parezca a esto:
+
+<body>
+  <ion-side-menus>
+    <ion-side-menu-content>
+    </ion-side-menu-content>
+    <ion-side-menu side="left">
+    </ion-side-menu>
+  </ion-side-menus>
+</body>
+
+En el código anterior, hemos añadido nuestro controlador <ion-side-menus>, el cual se encargará el arrastre y la exposición del menú lateral. En el interior del controlador que tenemos un <ion-side-menu-content> que es el área del Centro de contenido de la aplicación, y un <ion-side-menu-side="left"> el cual es menu lateral izquierdo, inicialmente oculto.
+
+Inicialización de la aplicación
+
+Ahora, si ejecuta el código (más en la prueba en un momento), usted no vera nada! Hay dos razones para ello: Nosotros no hemos creado una aplicación AngularJS para convertir las etiquetas personalizadas (como <ion-side-menus>) en algo funcional, y no tienen ningún contenido!
+
+Vamos a arreglar eso. En primer lugar, tenemos que crear un nuevo módulo AngularJS y decirle a Angular que lo inicialice. Vamos a crear un nuevo archivo que se encuentra en www/js/app.js. Pon este código en el archivo:
+
+angular.module ('todo',['ionic'])
+Esta es la forma de Angular de crear una aplicación, y nos está diciendo angular incluir el módulo IONIC que incluye todos el código IONIC que procesará las etiquetas anteriores y hará que nuestra aplicación tenga vida.
+
+Ahora, vuelve a index.html y justo antes de la línea <script src="cordova.js"></ script> añadir:
+
+<script src="/js/app.js"></script>
+Esto incluye el script que acaba de crear.
+
+Y para que nuestra nueva aplicación se ejecute , tenemos que añadir el atributo ng-app al cuerpo de la etiqueta:
+
+<body ng-app="todo">
+Ahora, todavía no veremos nada si corremos el código, porque tenemos que añadir algo de contenido a la aplicación. Vamos a seguir adelante y añadir un encabezado, tanto para el área de contenido central y el menú de la izquierda.
+
+Actualizar el contenido del body a:
+
+<body ng-app="todo">
+  <ion-side-menus>
+
+    <!-- Center content -->
+    <ion-side-menu-content>
+      <ion-header-bar class="bar-dark">
+        <h1 class="title">Todo</h1>
+      </ion-header-bar>
+      <ion-content>
+      </ion-content>
+    </ion-side-menu-content>
+
+    <!-- Left menu -->
+    <ion-side-menu side="left">
+      <ion-header-bar class="bar-dark">
+        <h1 class="title">Projects</h1>
+      </ion-header-bar>
+    </ion-side-menu>
+
+  </ion-side-menus>
+</body>
+
+
+Probarla:
+
+Con nuestra shell(consola de comando) y la aplicación lista para correr, vamos a probarla y ver cómo se ve!
+
+Capítulo 6: 
+
+Publicación de su aplicación
+
+Ahora que tenemos una aplicación trabajando, estamos listos para lanzarla al mundo! Desde que el equipo de IONIC  ha presentado la aplicación de esta guía a la app ha almacenar en la tienda de aplicaciones, es probable que usted querrá seguir este capítulo con una nueva aplicación que realice por su cuenta.
+
+Así que, primero, tenemos que generar una versión de lanzamiento de nuestra aplicación, dirigida a cada plataforma en la que deseamos implementarla. Antes de implementar, debemos tener cuidado de retirar los plugins necesarios durante el desarrollo que no deberían estar en el modo de producción. Por ejemplo, es probable que no queremos activar el plugin consola de depuración, por lo que deberíamos eliminarlo antes de generar la versiones de lanzamiento:
+
+$ cordova plugin rm cordova-plugin-console
+
+Publicación en Android
+
+Para generar una versión de lanzamiento para Android, podemos usar el siguiente comando CLI Cordova:
+
+$ cordova build --release android
+
+Esto generará una versión de lanzamiento basado en la configuración de su config.xml. Su aplicación IONIC tendrá valores por defecto predefinidos en este archivo, pero si tiene que personalizar cómo se construye su aplicación, puede editar este archivo para adaptarse a sus preferencias. Echa un vistazo a la documentación del archivo config.xml para más información.
+
+A continuación, podemos encontrar nuestro archivo APK sin firmar 
+en platforms/android/build/outputs/apk. En nuestro ejemplo, el archivo era platforms/android/build/outputs/apk/HelloWorld-release-unsigned.apk. 
+
+{
+  Esto es la verdad:
+  A continuación, podemos encontrar nuestro archivo APK sin firmar 
+  en platforms/android/build/outputs/apk. En nuestro ejemplo, el archivo era platforms/android/build/outputs/apk/android-release-unsigned.apk
+}
+
+Ahora, tenemos que firmar el APK sin firmar y ejecutar una utilidad de alineación en él para optimizarlo y prepararlo para la tienda de aplicaciones. Si ya tiene una clave de firma, omita estos pasos y usela.
+
+Vamos a generar nuestra clave privada usando el comando keytool que viene con el JDK. Si no se encuentra esta herramienta, consulte la guía de instalación:
+
+$ keytool -genkey -v -keystore my-release-key.keystore -alias alias_name -keyalg RSA -keysize 2048 -validity 10000
+
+Se le preguntará en primer lugar para crear una contraseña para la clave de almacenamiento. A continuación, contestar el resto de las preguntas de las herramientas y cuando este  todo hecho, debería tener un archivo llamado my-release-key.keystore creado en el directorio actual.
+
+Nota: Asegúrese de guardar este archivo en un lugar seguro, en caso de pérdida no será capaz de enviar actualizaciones de su aplicación!
+
+Para firmar el APK sin firmar, ejecutar la herramienta jarsigner que también se incluye en el JDK:
+
+
+$ jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore my-release-key.keystore HelloWorld-release-unsigned.apk alias_name
+
+{
+Ejemplo real:
+$ jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore my-release-key.keystore android-release-unsigned.apk alias_name	ej: nucapp 
+}
+
+Esta firma el apk en su lugar. Por último, tenemos que ejecutar la herramienta de alineación zip para optimizar el APK. La herramienta zipalign se puede encontrar en
+/path/to/Android/sdk/build-tools/VERSION/zipalign. Por ejemplo, en instalar OS X con Android Studio, zipalign está en ~/Library/Android/sdk/build-tools/VERSION/zipalign:
+
+$ Zipalign -v 4 HelloWorld-release-unsigned.apk HelloWorld.apk
+
+{
+Ejemplo real:
+ $ zipalign -v 4 android-release-unsigned.apk nucapp.apk
+}
+
+Ahora tenemos nuestra versión binaria  final llamada zipaligHelloWorld.apk y podemos liberar esta en la tienda de Google Play para que disfrute todo el mundo!
+
+(Hay algunas otras maneras de inscribirse los APK. Consulte la documentación oficial de firma de Android de la aplicación para obtener más información.)
+
+Google Play Store
+
+Ahora que tenemos nuestra liberación APK lista para el Google Play Store, podemos crear una lista de reproducción en la tienda y cargar nuestra APK.
+
+Para empezar, tendrá que visitar la tienda de Google Play la consola de desarrollo y crear una nueva cuenta de desarrollador. Por desgracia, esto no es gratuito. Sin embargo, el costo es de sólo $ 25 en comparación con $ 99 de Apple.
+
+Una vez que tenga una cuenta de desarrollador, puede seguir adelante y haga clic en "publicar una aplicación de Android en Google Play" como en la siguiente imagen:
+
+***   Aquí va la imagen Geogle play  Developer console**
+
+A continuación, puede seguir adelante y haga clic en el botón para editar la ficha de almacén (Vamos a subir un archivo APK más adelante). Usted deberá llenar la descripción de la aplicación. He aquí una pequeña muestra de cuando nos han cumplimentado la solicitud con la aplicación IONIC TODO:
+
+** Aquí va la imágen de la app IONIC TODO **
+
+Cuando esté listo, subir el archivo APK para la versión de lanzamiento y publicar el anuncio. Sea paciente y su duro trabajo debería vivir en la naturaleza!
+
+La actualización de su aplicación
+
+A medida que desarrolla su aplicación, tendrá que actualizarla periódicamente.
+
+Para que la tienda de Google Play acepte los archivos APK actualizados, tendrá que editar el archivo config.xml para incrementar el valor de la versión, luego reconstruir la aplicación para su liberación.  
+
+{
+
+Ejemplo del PATH
+
+ANDROID_HOME
+
+export ANDROID_HOME=~/Android/Sdk
+export PATH=${PATH}:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
+export PATH=/usr/local/bin:$PATH
+
+}
